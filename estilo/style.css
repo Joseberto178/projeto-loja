@@ -1,0 +1,288 @@
+/* Resetando margens e preenchimento */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* Estilos do cabeçalho (menu) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0B1F3A;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-bottom: 3px solid #CBA135;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+
+nav a:hover {
+  background-color: #CBA135;
+  color: #0B1F3A;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção Hero */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../imagens/ChatGPT\ Image\ 24\ de\ abr.\ de\ 2025\,\ 18_15_55.png) no-repeat center top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* Seção Coleções */
+.colecoes {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #F5F7FA, #E4E8F0);
+  text-align: center;
+  border-top: 5px solid #0B1F3A;
+}
+
+.colecoes h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #0B1F3A;
+  margin-bottom: 40px;
+}
+
+.colecoes .galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.colecoes img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.colecoes img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Seção Sobre Nós */
+.sobre-nos {
+  padding: 80px 20px;
+  background: #0B1F3A;
+  color: #FFFFFF;
+  text-align: center;
+  border-top: 5px solid #CBA135;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-nos h2 {
+  font-size: 2.8rem;
+  color: #CBA135; /* Dourado para destaque */
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sobre-nos p {
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Seção Contato */
+.contato {
+  padding: 80px 20px;
+  background: #CBA135;
+  text-align: center;
+  color: #0B1F3A;
+  border-top: 5px solid #0B1F3A;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contato h2 {
+  font-size: 2.8rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contato p {
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contato input, .contato textarea {
+  padding: 15px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.contato input:focus, .contato textarea:focus {
+  border-color: #0B1F3A;
+  outline: none;
+}
+
+.contato button {
+  padding: 12px 30px;
+  background-color: #0B1F3A;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contato button:hover {
+  background-color: #CBA135;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animação de Fade para as seções */
+.sobre-nos, .contato {
+  opacity: 0;
+  animation: fadeInSection 1s forwards;
+}
+
+.sobre-nos:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.contato:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Seção Onde Estamos */
+.onde-estamos {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #E4E8F0, #F5F7FA);
+  text-align: center;
+}
+
+.onde-estamos h2 {
+  font-size: 2.5rem;
+  color: #0B1F3A;
+  margin-bottom: 20px;
+}
+
+.onde-estamos p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.mapa {
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #0B1F3A;
+  color: #fff;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Adicionando animação de fade-in para a seção Onde Estamos */
+.onde-estamos {
+  opacity: 0;
+  animation: fadeInSection 1s forwards;
+}
+
+.onde-estamos:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

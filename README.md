@@ -35,9 +35,6 @@ Projeto fictício de uma loja de roupas de alto padrão, desenvolvido com foco e
 - Estilo minimalista e sofisticado
 - Tipografia elegante e legível
 
-## 🔗 Acesse o projeto
-
-➡️ [Clique aqui para ver o projeto online](https://joseberto178.github.io/projeto-loja/) 
 
 ---
 
